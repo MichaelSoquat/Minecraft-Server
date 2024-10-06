@@ -27,7 +27,7 @@ Clone the repository:
 Start the server:
 
   ```
-  docker-compose up --build
+  docker compose up --build
   ```
 
 Access the server on port 8888 (forwarded to Minecraft port 25565).
@@ -42,7 +42,7 @@ Access the server on port 8888 (forwarded to Minecraft port 25565).
 Stop the server:
 
   ```
-  docker-compose down
+  docker compose down
   ```
 
 Dockerfile:
@@ -71,9 +71,6 @@ docker-compose.yaml:
 Defines the server setup, port forwarding, and persistent storage:
 
   ```
-
-  version: '3.8'
-
   services:
     mc-server:
       build:
