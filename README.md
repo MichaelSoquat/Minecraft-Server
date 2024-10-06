@@ -27,7 +27,7 @@ Clone the repository:
 Start the server:
 
   ```
-  docker compose up --build
+  docker compose up
   ```
 
 Access the server on port 8888 (forwarded to Minecraft port 25565).
