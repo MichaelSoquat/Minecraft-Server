@@ -1,11 +1,12 @@
 # Minecraft Server Docker Setup
 
 ## Table of Contents
-- [Description](#description)
-- [Quickstart](#quickstart)
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Troubleshooting](#troubleshooting)
+- [Minecraft Server Docker Setup](#minecraft-server-docker-setup)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Quickstart](#quickstart)
+  - [Requirements:](#requirements)
+  - [Usage:](#usage)
 
 
 ## Description
@@ -27,7 +28,7 @@ Clone the repository:
 Start the server:
 
   ```
-  docker-compose up --build
+  docker compose up
   ```
 
 Access the server on port 8888 (forwarded to Minecraft port 25565).
@@ -42,7 +43,7 @@ Access the server on port 8888 (forwarded to Minecraft port 25565).
 Stop the server:
 
   ```
-  docker-compose down
+  docker compose down
   ```
 
 Dockerfile:
@@ -72,12 +73,10 @@ Defines the server setup, port forwarding, and persistent storage:
 
   ```
 
-  version: '3.8'
-
   services:
     mc-server:
       build:
-        context: ./java
+        context: .
       container_name: mc-server
       ports:
         - "8888:25565"

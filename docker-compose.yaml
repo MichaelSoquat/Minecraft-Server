@@ -1,9 +1,7 @@
-version: '3.8'
-
 services:
   mc-server:
     build:
-      context: ./java 
+      context: .
     container_name: mc-server
     ports:
       - "8888:25565"
