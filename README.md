@@ -72,7 +72,6 @@ docker-compose.yaml:
 Defines the server setup, port forwarding, and persistent storage:
 
   ```
-
   services:
     mc-server:
       build:
