@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mc-server:
+    build:
+      context: ./java 
+    container_name: mc-server
+    ports:
+      - "8888:25565"
+    volumes:
+      - mc-data:/app  
+    restart: on-failure
+
+volumes:
+  mc-data:
