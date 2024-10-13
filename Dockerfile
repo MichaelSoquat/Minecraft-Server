@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y wget openjdk-21-jdk && \
     rm -rf /var/lib/apt/lists/*
 
-COPY server.jar /app/
+COPY . /app/
 RUN echo "eula=true" > eula.txt
 
 EXPOSE 25565
